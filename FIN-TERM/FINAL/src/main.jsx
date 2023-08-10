@@ -4,12 +4,13 @@ import App from './App.jsx'
 import { ChakraProvider } from '@chakra-ui/react'
 import customTheme from './theme'
 import '@fontsource-variable/jost'
+import './main.css'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ChakraProvider theme={customTheme}>
-      <App />
+        <App />
     </ChakraProvider>
   </React.StrictMode>,
 )

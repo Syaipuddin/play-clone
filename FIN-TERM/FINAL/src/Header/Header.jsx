@@ -34,9 +34,12 @@ export default function Header() {
             align='center' 
             bg='#353333' 
             w='100%' 
-            h='55px' 
-            px='20px'
-            zIndex='hide'>
+            h='9vh' 
+            px='2vw'
+            pos='fixed'
+            top='0'
+            left='0'
+            zIndex='2' >
                 <IconButton 
                     colorScheme='#353333'
                     icon={<ArrowBackIcon boxSize={7}/>} />

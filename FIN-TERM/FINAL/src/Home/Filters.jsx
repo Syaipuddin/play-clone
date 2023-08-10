@@ -1,7 +1,7 @@
-import { Box, Button } from "@chakra-ui/react"
+import { List, ListItem, Box, Button } from "@chakra-ui/react"
 import {useEffect, useState } from 'react'
 
-function InactiveFilter({onClick}) {
+function InactiveFilter({name, onClick}) {
     return(
         <Button
         borderColor='#353333'
@@ -10,12 +10,12 @@ function InactiveFilter({onClick}) {
         _hover={{bg : '#353333'}}
         onClick={onClick}
         >
-            Filter
+           {name}
         </Button>
     )
 }
 
-function ActiveFilter() {
+function ActiveFilter({name}) {
 
     return(
         <Button
@@ -23,37 +23,54 @@ function ActiveFilter() {
         textColor='#fff'
         variant='outline'
         >
-            Filter
+            {name}
         </Button>
     )
 }
 
 export default function Filters() {
 
-    const [filter, setFilter] = useState({all : true, trend : false});
-    const [clicked, setClicked] = useState(1);
+    const [filter, setFilter] = useState({
+        f_1 : { id : 1, name: "All", isClicked : true},
+        f_2 : { id : 2, name: "Trending", isClicked : false},
+        f_3 : { id : 3, name: "Discount", isClicked : false}
+    });
 
 
     useEffect(() => {
 
-        switch(clicked){
-            case 1 :
-                setFilter({...filter, all : true, trend : false});
-                break;
-    
-            case 2 :
-                setFilter({...filter, all : false, trend : true});
-        }
 
-    }, [filter, clicked])
 
-    let data = for(let i = 0; i < 5; i++) {
-        
-    }
+    }, [filter])
 
+    const filterList = Object.keys(filter).map(e =>{
+        return(
+            <ListItem key={filter[e].id}>
+                {filter[e].isClicked === true? 
+                    <ActiveFilter 
+                    name={filter[e].name}/> : 
+
+                    <InactiveFilter 
+                    name={filter[e].name} 
+                    onClick={()=> {
+                        setFilter({...filter, 
+                                    f_1 : {...filter.f_1, isClicked : false},
+                                    f_2 : {...filter.f_2, isClicked : false},
+                                    f_3 : {...filter.f_3, isClicked : false},
+                                    [e] : {...filter[e], isClicked:true},
+                                });
+                        console.log(filter);
+                    }}/>
+                    }
+            </ListItem>
+                
+        )
+    })
     return(
-        <Box>
-            { }
+        <Box mt='15vh' mx='2vw'>
+            <List display='flex' gap='12px'>
+                {filterList}
+            </List>
         </Box>
     )
 }

@@ -7,7 +7,7 @@ const customTheme = extendTheme({
         fontFamily : `'Jost Variable', sans-serif`,
         bgGradient :'radial(71.66% 71.65% at 50.00% 104.37%, rgba(78, 79, 75, 0.76) 0%, #000 100%)',
         minHeight : '100vh',
-        minWidth : '100vh'
+        minWidth : '100vw'
       }
     }
   },
