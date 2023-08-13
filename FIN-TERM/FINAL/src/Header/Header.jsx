@@ -39,7 +39,7 @@ export default function Header() {
             pos='fixed'
             top='0'
             left='0'
-            zIndex='2' >
+            sx={{zIndex : 10}} >
                 <IconButton 
                     colorScheme='#353333'
                     icon={<ArrowBackIcon boxSize={7}/>} />

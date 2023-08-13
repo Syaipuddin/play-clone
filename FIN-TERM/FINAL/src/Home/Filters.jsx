@@ -1,5 +1,6 @@
 import { List, ListItem, Box, Button } from "@chakra-ui/react"
 import {useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 
 function InactiveFilter({name, onClick}) {
     return(
@@ -73,4 +74,13 @@ export default function Filters() {
             </List>
         </Box>
     )
+}
+
+InactiveFilter.propTypes = {
+    name : PropTypes.string,
+    onClick : PropTypes.func
+}
+
+ActiveFilter.propTypes = {
+    name : PropTypes.string
 }
