@@ -6,7 +6,7 @@ export default defineConfig({
   server :{
     proxy : {
       '/api' : {
-        target : 'https://gg-final-backend.vercel.app/api',
+        target : 'https://gg-final-backend.vercel.app',
         changeOrigin: true,
         secure : false,
       }

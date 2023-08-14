@@ -1,2 +1,2 @@
-/api/* https://yourapi.domain.com/:splat 200
+/api/* https://gg-final-backend.vercel.app/api/:splat 200
 /* /index.html 200    
