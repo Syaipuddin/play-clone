@@ -1,0 +1,69 @@
+
+
+  *::-webkit-scrollbar {
+    width: 1px;
+
+  }
+  
+  *::-webkit-scrollbar-track {
+    display: 'none';
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #353333;
+    border-radius: 10px;
+    border: none;
+  }
+
+  input[type='file'] {
+    visibility: hidden ;
+  }
+
+#file-form {
+  display: inline-block;
+  border: dashed 1px white;
+  color : white;
+  font-size: 12px;
+  width: 100%;
+  padding: 2% 48% 2% 48%;
+  border-radius: 10px;
+  cursor : pointer;
+}
+
+  .youtube {
+    width: 100%;
+    height: 50vw;
+    border-radius: 10px;
+  }
+
+@media only screen and (min-width : 480px){
+  .youtube {
+    width: 100%;
+    height: 50vw;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (min-width : 768px){
+  .youtube {
+    width: 100%;
+    height: 45vw;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (min-width : 992px){
+  .youtube {
+    width: 100%;
+    height:59vh;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (min-width : 1280px){
+  .youtube {
+    width: 100%;
+    height:29vw;
+    border-radius: 10px;
+  }
+}
