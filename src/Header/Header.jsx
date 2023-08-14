@@ -12,6 +12,7 @@ export default function Header() {
             top='0'
             left='0'
             gap='2vw'
+            borderBottom='solid gray 1px'
             sx={{zIndex : 10}} >
                 <IconButton 
                     colorScheme='#353333'
