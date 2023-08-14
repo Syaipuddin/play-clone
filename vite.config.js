@@ -9,7 +9,6 @@ export default defineConfig({
         target : 'https://gg-final-backend.vercel.app',
         changeOrigin: true,
         secure : false,
-        rewrite: (path) => path.replace(/^\/api/, '')
       }
     }
   },
